@@ -13,6 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20160331023214) do
 
+  create_table "disease_accession", id: false, force: true do |t|
+    t.text "disease_name", limit: 100
+    t.text "accession",    limit: 25
+  end
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
